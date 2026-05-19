@@ -5,8 +5,8 @@
       .bg { fill: #0f1a18; }
       .zone-up { fill: #1a2f2c; }
       .zone-down { fill: #142824; }
-      .label { fill: #9fd4b0; font: 600 11px sans-serif; letter-spacing: 0.15em; }
-      .band { fill: #b8e050; font: 700 14px sans-serif; }
+      .label { fill: #e8b923; font: 600 11px sans-serif; letter-spacing: 0.15em; }
+      .band { fill: #e8b923; font: 700 14px sans-serif; }
       .item { fill: rgba(255,255,255,0.1); stroke: rgba(255,255,255,0.25); stroke-width: 1; }
       .name { fill: #fff; font: 600 13px sans-serif; }
       .ch { fill: rgba(255,255,255,0.65); font: 600 10px sans-serif; }
@@ -94,5 +94,5 @@
     <text class="ch" x="47" y="58" text-anchor="middle">Ch 8</text>
   </g>
 
-  <text class="note" x="400" y="505" text-anchor="middle">Audience í</text>
+  <text class="note" x="400" y="505" text-anchor="middle">Audience ù</text>
 </svg>
