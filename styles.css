@@ -11,6 +11,7 @@
   --reggae-gold: #e8b923;
   --logo-lime: #84d23e;
   --beam-yellow: #f5ce45;
+  --beam-orange: #f0a63d;
   --reggae-red: #b83232;
   --ink: #0f1a18;
   --ink-soft: #2a3d39;
@@ -961,7 +962,7 @@ p {
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.03em;
-  color: var(--title-color);
+  color: var(--beam-orange);
   padding: 1rem 0;
   list-style: none;
 }
