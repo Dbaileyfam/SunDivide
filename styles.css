@@ -25,7 +25,8 @@
   --panel-border: rgba(160, 210, 230, 0.22);
   --panel-text: #eef6fa;
   --panel-text-muted: rgba(210, 228, 238, 0.88);
-  --panel-heading: #000000;
+  --panel-heading: #ffffff;
+  --title-color: var(--logo-lime);
   --panel-accent: var(--reggae-gold);
   --panel-link: var(--reggae-gold);
   --radius: 12px;
@@ -66,7 +67,7 @@ main h2,
 main h3 {
   font-family: var(--font-display);
   font-weight: 400;
-  color: var(--panel-heading);
+  color: var(--title-color);
   letter-spacing: 0.03em;
   line-height: 1.15;
 }
@@ -235,7 +236,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #000;
+  color: #fff;
 }
 
 .hero-content {
@@ -275,20 +276,18 @@ p {
   font-size: 1.05rem;
   letter-spacing: 0.04em;
   text-transform: none;
-  color: #000;
+  color: var(--title-color);
   opacity: 1;
   margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .tagline {
   font-size: clamp(1.2rem, 3.5vw, 1.75rem);
-  color: #000;
+  color: #fff;
   letter-spacing: 0.03em;
   margin-bottom: 1.75rem;
-  text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 }
 
 .hero-actions {
@@ -309,29 +308,25 @@ p {
   justify-content: center;
   gap: 0.25rem 1.25rem;
   padding: 1.25rem 1rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(180deg, rgba(20, 12, 8, 0.45), transparent);
   backdrop-filter: blur(4px);
 }
 
-.hero .nav a {
-  color: #000;
+.nav a {
+  color: #fff;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  opacity: 1;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-.hero .nav a:hover,
-.hero .nav a:focus-visible {
-  color: #000;
-  opacity: 0.6;
-}
-
-.hero .eyebrow {
-  color: #000;
+.nav a:hover,
+.nav a:focus-visible {
+  color: #fff;
+  opacity: 0.7;
 }
 
 /* Buttons */
@@ -786,7 +781,7 @@ p {
   font-family: var(--font-display);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
-  color: var(--logo-lime);
+  color: var(--title-color);
   line-height: 1.2;
 }
 
@@ -965,7 +960,7 @@ p {
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.03em;
-  color: #000;
+  color: var(--title-color);
   padding: 1rem 0;
   list-style: none;
 }
