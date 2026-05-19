@@ -532,6 +532,88 @@ p {
   font-weight: 500;
 }
 
+/* Listen & follow — sun icon links */
+.listen-icons {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem 1.5rem;
+}
+
+.listen-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  color: var(--panel-heading);
+}
+
+.listen-icon__orb {
+  position: relative;
+  width: 4.25rem;
+  height: 4.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff4c4 0%, var(--reggae-gold) 45%, #c98910 100%);
+  box-shadow:
+    0 4px 18px rgba(232, 185, 35, 0.5),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.listen-icon__orb::before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  z-index: -1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from -4deg,
+    var(--reggae-gold) 0deg 9deg,
+    transparent 9deg 20deg
+  );
+  opacity: 0.9;
+  transition: transform 0.25s ease;
+}
+
+.listen-icon:hover .listen-icon__orb,
+.listen-icon:focus-visible .listen-icon__orb {
+  transform: scale(1.1);
+  box-shadow:
+    0 6px 28px rgba(232, 185, 35, 0.65),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.listen-icon:hover .listen-icon__orb::before,
+.listen-icon:focus-visible .listen-icon__orb::before {
+  transform: rotate(12deg);
+}
+
+.listen-icon:focus-visible {
+  outline: 2px solid var(--reggae-gold);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.listen-icon__platform {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: var(--ink);
+}
+
+.listen-icon__label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--reggae-gold);
+  line-height: 1;
+}
+
 .discography {
   font-size: 0.9rem;
   color: var(--panel-text-muted);
