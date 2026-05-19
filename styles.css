@@ -468,31 +468,6 @@ p {
 }
 
 /* Bio split */
-.bio-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.card-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.card-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--panel-border);
-  font-size: 0.95rem;
-  color: var(--panel-text);
-  line-height: 1.45;
-}
-
-.card-list li:last-child {
-  border-bottom: none;
-}
-
-.bio-card h3,
 .lineup-card h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
