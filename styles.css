@@ -771,19 +771,46 @@ p {
   opacity: 0.75;
 }
 
-.input-table-wrap {
+.tech-details {
   background: var(--panel-strong);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
   padding: 0 1rem 1rem;
+  margin-bottom: 1rem;
 }
 
-.input-table-wrap summary {
+.tech-details:last-of-type {
+  margin-bottom: 0;
+}
+
+.tech-details summary {
   cursor: pointer;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  color: var(--panel-heading);
   padding: 1rem 0;
+  list-style: none;
+}
+
+.tech-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.tech-details summary::after {
+  content: " +";
+  opacity: 0.7;
+}
+
+.tech-details[open] summary::after {
+  content: " −";
+}
+
+.tech-details .stage-layout {
+  margin-bottom: 0;
 }
 
 .input-table {
@@ -902,7 +929,7 @@ p {
   .highlight-list li,
   .press-quote,
   .show-card,
-  .input-table-wrap {
+  .tech-details {
     background: #fff;
     backdrop-filter: none;
     color: var(--text);
