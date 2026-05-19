@@ -407,7 +407,7 @@ p {
 }
 
 .section-intro {
-  color: var(--panel-text-muted);
+  color: #fff;
   max-width: 42rem;
   margin-bottom: 2rem;
 }
@@ -1055,6 +1055,7 @@ p {
 
 .contact-section .lead {
   max-width: 32rem;
+  color: #fff;
 }
 
 .contact-grid {
