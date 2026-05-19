@@ -1,4 +1,4 @@
-/* Sun Divide EPK — horizon split: warm sun above, reggae sea below */
+/* Sun Divide EPK — animated sun-ray artwork background */
 
 :root {
   --sun-gold: #f4a825;
@@ -41,7 +41,12 @@ body {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--text);
-  background: var(--paper);
+  background: #c9a88a;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 img {
@@ -121,75 +126,78 @@ p {
   margin-inline: auto;
 }
 
-/* —— Hero: Sun Divide visual —— */
+/* —— Animated full-page background —— */
+.site-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-background__rays {
+  position: absolute;
+  inset: -12%;
+  background: url("assets/background.png") center center / cover no-repeat;
+  transform-origin: 18% 22%;
+  will-change: transform;
+  animation: rays-drift 55s ease-in-out infinite alternate;
+}
+
+.site-background__warmth {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 18, 12, 0.25) 0%,
+    rgba(247, 244, 237, 0.35) 45%,
+    rgba(247, 244, 237, 0.55) 100%
+  );
+  animation: warmth-pulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes rays-drift {
+  0% {
+    transform: scale(1.06) translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.12) translate(-1.2%, -0.8%) rotate(1.25deg);
+  }
+  100% {
+    transform: scale(1.08) translate(1%, 0.6%) rotate(-0.75deg);
+  }
+}
+
+@keyframes warmth-pulse {
+  0% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-background__rays,
+  .site-background__warmth {
+    animation: none;
+  }
+
+  .site-background__rays {
+    inset: 0;
+    transform: none;
+  }
+}
+
+/* —— Hero —— */
 .hero {
   position: relative;
+  z-index: 2;
   min-height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
   color: #fff;
-}
-
-.hero-sky {
-  position: absolute;
-  inset: 0 0 42%;
-  background: linear-gradient(
-    175deg,
-    #5c2018 0%,
-    var(--sun-coral) 18%,
-    var(--sun-amber) 42%,
-    var(--sun-gold) 68%,
-    #ffe8b8 100%
-  );
-}
-
-/* Decorative orb hidden — band logo provides the sun */
-.hero-sun {
-  display: none;
-}
-
-.hero-horizon {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 58%;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.5) 20%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0.5) 80%,
-    transparent
-  );
-  z-index: 3;
-}
-
-.hero-sea {
-  position: absolute;
-  inset: 58% 0 0;
-  background: linear-gradient(
-    180deg,
-    var(--sea-light) 0%,
-    var(--sea-mid) 35%,
-    var(--sea-deep) 100%
-  );
-}
-
-.hero-sea::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    -8deg,
-    transparent,
-    transparent 40px,
-    rgba(255, 255, 255, 0.03) 40px,
-    rgba(255, 255, 255, 0.03) 42px
-  );
-  pointer-events: none;
 }
 
 .hero-content {
@@ -217,14 +225,16 @@ p {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  opacity: 0.9;
+  opacity: 0.95;
   margin-bottom: 0.75rem;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
 }
 
 .tagline {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  opacity: 0.95;
+  opacity: 0.98;
   margin-bottom: 1.75rem;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
 }
 
 .hero-actions {
@@ -245,7 +255,8 @@ p {
   justify-content: center;
   gap: 0.25rem 1.25rem;
   padding: 1.25rem 1rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent);
+  background: linear-gradient(180deg, rgba(20, 12, 8, 0.55), transparent);
+  backdrop-filter: blur(4px);
 }
 
 .nav a {
@@ -307,10 +318,13 @@ p {
 /* Sections */
 .section {
   padding: 4rem 0;
+  background: rgba(247, 244, 237, 0.78);
+  backdrop-filter: blur(10px);
 }
 
 .section-alt {
-  background: var(--paper-alt);
+  background: rgba(235, 230, 218, 0.72);
+  backdrop-filter: blur(10px);
 }
 
 .section-intro {
@@ -339,7 +353,8 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border);
@@ -387,7 +402,8 @@ p {
 }
 
 .card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -433,7 +449,8 @@ p {
 
 .highlight-list li {
   padding: 1rem 1.25rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius);
   border-left: 4px solid var(--reggae-gold);
   box-shadow: 0 2px 12px rgba(13, 61, 56, 0.06);
@@ -482,7 +499,8 @@ p {
 .press-quote {
   margin: 0 0 2rem;
   padding: 2rem 2rem 1.5rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
@@ -552,7 +570,8 @@ p {
   gap: 1.25rem;
   align-items: center;
   padding: 1.5rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: 0 4px 16px rgba(13, 61, 56, 0.06);
@@ -688,7 +707,8 @@ p {
 }
 
 .input-table-wrap {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0 1rem 1rem;
@@ -728,12 +748,8 @@ p {
 
 /* Contact */
 .contact-section {
-  background: linear-gradient(
-    180deg,
-    var(--paper) 0%,
-    var(--paper-alt) 50%,
-    rgba(20, 92, 82, 0.08) 100%
-  );
+  background: rgba(247, 244, 237, 0.82);
+  backdrop-filter: blur(10px);
 }
 
 .contact-grid {
@@ -766,7 +782,10 @@ p {
 
 /* Footer */
 .site-footer {
-  background: var(--ink);
+  position: relative;
+  z-index: 1;
+  background: rgba(15, 26, 24, 0.88);
+  backdrop-filter: blur(10px);
   color: rgba(255, 255, 255, 0.75);
   padding: 1.5rem 0;
   font-size: 0.9rem;
@@ -791,6 +810,10 @@ p {
 
 /* Print */
 @media print {
+  .site-background {
+    display: none;
+  }
+
   .nav,
   .hero-actions,
   .skip-link {
@@ -802,8 +825,11 @@ p {
     page-break-after: avoid;
   }
 
-  .hero-sun {
-    box-shadow: none;
+  .section,
+  .section-alt,
+  .contact-section {
+    background: #fff;
+    backdrop-filter: none;
   }
 
   a[href^="http"]::after {
