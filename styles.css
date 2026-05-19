@@ -63,7 +63,19 @@ main {
 
 main h2,
 main h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
   color: var(--panel-heading);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+main h2 {
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+}
+
+main h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
 }
 
 main a {
@@ -245,7 +257,7 @@ p {
   filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.45));
 }
 
-/* Display font — short accents only (not body copy or section titles) */
+/* Display font — logo style (titles, accents; not body copy) */
 .eyebrow,
 .tagline,
 .fact-value,
@@ -253,8 +265,7 @@ p {
 .btn-primary,
 .contact-name,
 .band-marker,
-.press-quote cite,
-.accent-heading {
+.press-quote cite {
   font-family: var(--font-display);
   font-weight: 400;
 }
@@ -831,11 +842,6 @@ p {
   letter-spacing: 0.02em;
   color: var(--panel-heading);
   margin-bottom: 0.5rem !important;
-}
-
-.accent-heading {
-  font-size: 1.25rem;
-  letter-spacing: 0.02em;
 }
 
 .contact-card a {
