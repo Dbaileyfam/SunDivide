@@ -1090,9 +1090,11 @@ p {
   text-align: center;
 }
 
+#contact .lead,
 .contact-section .lead {
   max-width: 32rem;
-  color: #fff;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
 
 .contact-grid {
