@@ -564,11 +564,9 @@ p {
 
 .listen-icon {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.45rem;
+  justify-content: center;
   text-decoration: none;
-  color: var(--panel-heading);
 }
 
 .listen-icon__orb {
@@ -630,23 +628,29 @@ p {
 }
 
 .listen-icon__platform {
-  width: 1.65rem;
-  height: 1.65rem;
-  fill: var(--ink);
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: currentColor;
 }
 
-.listen-icon__label {
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  color: var(--sun-amber);
-  line-height: 1;
-  transition: color 0.2s ease;
+.listen-icon--spotify {
+  color: #1db954;
 }
 
-.listen-icon:hover .listen-icon__label,
-.listen-icon:focus-visible .listen-icon__label {
-  color: #f5b060;
+.listen-icon--apple {
+  color: #fa243c;
+}
+
+.listen-icon--youtube {
+  color: #ff0000;
+}
+
+.listen-icon--linktree {
+  color: #43e660;
+}
+
+.listen-icon--facebook {
+  color: #1877f2;
 }
 
 .discography {
