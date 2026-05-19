@@ -464,14 +464,31 @@ p {
 }
 
 /* Bio split */
-.bio-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+.bio-text-panel {
+  position: relative;
 }
 
-.bio-card {
-  min-height: 5rem;
+.bio-text-panel > .bio-card {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  min-height: 100%;
+  padding: 0;
+  pointer-events: none;
+}
+
+.bio-text {
+  position: relative;
+  z-index: 1;
+  padding: 0.9rem 1rem;
+}
+
+.bio-text > :first-child {
+  margin-top: 0;
+}
+
+.bio-text > :last-child {
+  margin-bottom: 0;
 }
 
 .lineup-card h3 {
