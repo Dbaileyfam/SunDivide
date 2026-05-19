@@ -21,6 +21,7 @@
   --radius-lg: 20px;
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-display: "Luckiest Guy", cursive;
   --shadow-soft: 0 12px 40px rgba(13, 61, 56, 0.15);
   --max-width: 1080px;
 }
@@ -220,20 +221,31 @@ p {
   filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.45));
 }
 
+/* Display font — short accents only (not body copy or section titles) */
+.eyebrow,
+.tagline,
+.fact-value,
+.show-date,
+.btn-primary,
+.contact-name,
+.band-marker,
+.press-quote cite,
+.accent-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
 .eyebrow {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
   opacity: 0.95;
   margin-bottom: 0.75rem;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
 }
 
 .tagline {
-  font-family: "Luckiest Guy", "Fredoka One", cursive;
   font-size: clamp(1.2rem, 3.5vw, 1.75rem);
-  font-weight: 400;
   color: #000;
   letter-spacing: 0.03em;
   margin-bottom: 1.75rem;
@@ -298,6 +310,8 @@ p {
 }
 
 .btn-primary {
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
   background: var(--reggae-gold);
   color: var(--ink);
   border-color: var(--reggae-gold);
@@ -387,9 +401,8 @@ p {
 }
 
 .fact-value {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
   color: var(--ink);
 }
 
@@ -545,7 +558,8 @@ p {
 
 .press-quote cite {
   font-style: normal;
-  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
   color: var(--sea-mid);
 }
 
@@ -595,9 +609,7 @@ p {
 }
 
 .show-date {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.15rem;
   line-height: 1.2;
 }
 
@@ -652,9 +664,9 @@ p {
 
 .band-marker {
   text-align: center;
-  font-family: var(--font-serif);
-  font-size: 0.85rem;
-  opacity: 0.5;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  opacity: 0.65;
   margin: 1rem 0 0;
 }
 
@@ -774,10 +786,14 @@ p {
 }
 
 .contact-name {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
   margin-bottom: 0.5rem !important;
+}
+
+.accent-heading {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
 }
 
 .contact-card a {
