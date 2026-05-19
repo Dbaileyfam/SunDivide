@@ -813,6 +813,27 @@ p {
   margin-bottom: 0;
 }
 
+.tech-download {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.btn-download {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  background: transparent;
+  color: var(--panel-accent);
+  border: 2px solid var(--panel-accent);
+}
+
+.btn-download:hover {
+  background: rgba(184, 224, 80, 0.15);
+  color: var(--panel-heading);
+  border-color: var(--panel-accent);
+}
+
 .input-table {
   width: 100%;
   border-collapse: collapse;

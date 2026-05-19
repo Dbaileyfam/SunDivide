@@ -1,0 +1,24 @@
+SUN DIVIDE — INPUT LIST
+Five-piece layout · IEM outputs required
+
+DOWNSTAGE (audience side)
+  Ch 1   Kick
+  Ch 2   Snare
+  Ch 3   Hi-hat
+  Ch 4   Toms 1 & 2
+  Ch 5   Floor tom
+  Ch 6   Bass guitar (active DI)
+  Ch 7   Rhythm guitar
+  Ch 8   Lead guitar
+
+UPSTAGE
+  Ch 9   Keyboards (2 ch DI)
+  Ch 10  Keys vocal
+  Ch 11  Lead vocal
+  Ch 12  Lead guitar vocal
+
+Ch 13–16  (available)
+
+NOTE: Outputs required for in-ear monitors (IEM).
+
+Contact: Thom Welsh · 801-671-7308 · welsh528@gmail.com

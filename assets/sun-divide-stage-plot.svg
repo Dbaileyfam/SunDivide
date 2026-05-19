@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Sun Divide stage plot">
+  <defs>
+    <style>
+      .bg { fill: #0f1a18; }
+      .zone-up { fill: #1a2f2c; }
+      .zone-down { fill: #142824; }
+      .label { fill: #9fd4b0; font: 600 11px sans-serif; letter-spacing: 0.15em; }
+      .band { fill: #b8e050; font: 700 14px sans-serif; }
+      .item { fill: rgba(255,255,255,0.1); stroke: rgba(255,255,255,0.25); stroke-width: 1; }
+      .name { fill: #fff; font: 600 13px sans-serif; }
+      .ch { fill: rgba(255,255,255,0.65); font: 600 10px sans-serif; }
+      .small { fill: rgba(255,255,255,0.75); font: 500 9px sans-serif; }
+      .divider { stroke: rgba(255,255,255,0.25); stroke-width: 2; stroke-dasharray: 8 6; }
+      .title { fill: #eef6fa; font: 700 22px sans-serif; }
+      .note { fill: rgba(210,228,238,0.9); font: 500 12px sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="800" height="520"/>
+  <text class="title" x="400" y="36" text-anchor="middle">SUN DIVIDE  STAGE PLOT</text>
+  <text class="note" x="400" y="58" text-anchor="middle">IEM outputs required</text>
+
+  <rect class="zone-up" x="40" y="72" width="720" height="180" rx="8"/>
+  <text class="label" x="400" y="96" text-anchor="middle">UPSTAGE</text>
+  <text class="band" x="400" y="228" text-anchor="middle">SUN DIVIDE</text>
+
+  <g transform="translate(70, 110)">
+    <rect class="item" width="150" height="72" rx="6"/>
+    <text class="name" x="75" y="38" text-anchor="middle">Keyboards</text>
+    <text class="small" x="75" y="54" text-anchor="middle">2 ch DI</text>
+    <text class="ch" x="75" y="66" text-anchor="middle">Ch 9</text>
+  </g>
+  <g transform="translate(235, 110)">
+    <rect class="item" width="130" height="72" rx="6"/>
+    <text class="name" x="65" y="42" text-anchor="middle">Keys vocal</text>
+    <text class="ch" x="65" y="66" text-anchor="middle">Ch 10</text>
+  </g>
+  <g transform="translate(380, 110)">
+    <rect class="item" width="130" height="72" rx="6"/>
+    <text class="name" x="65" y="42" text-anchor="middle">Lead vocal</text>
+    <text class="ch" x="65" y="66" text-anchor="middle">Ch 11</text>
+  </g>
+  <g transform="translate(525, 110)">
+    <rect class="item" width="150" height="72" rx="6"/>
+    <text class="name" x="75" y="38" text-anchor="middle">Lead guitar</text>
+    <text class="small" x="75" y="54" text-anchor="middle">vocal</text>
+    <text class="ch" x="75" y="66" text-anchor="middle">Ch 12</text>
+  </g>
+
+  <line class="divider" x1="40" y1="262" x2="760" y2="262"/>
+
+  <rect class="zone-down" x="40" y="272" width="720" height="200" rx="8"/>
+  <text class="label" x="400" y="296" text-anchor="middle">DOWNSTAGE</text>
+
+  <g transform="translate(55, 310)">
+    <rect class="item" width="82" height="64" rx="6"/>
+    <text class="name" x="41" y="38" text-anchor="middle">Kick</text>
+    <text class="ch" x="41" y="58" text-anchor="middle">Ch 1</text>
+  </g>
+  <g transform="translate(148, 310)">
+    <rect class="item" width="82" height="64" rx="6"/>
+    <text class="name" x="41" y="38" text-anchor="middle">Snare</text>
+    <text class="ch" x="41" y="58" text-anchor="middle">Ch 2</text>
+  </g>
+  <g transform="translate(241, 310)">
+    <rect class="item" width="82" height="64" rx="6"/>
+    <text class="name" x="41" y="38" text-anchor="middle">Hi-hat</text>
+    <text class="ch" x="41" y="58" text-anchor="middle">Ch 3</text>
+  </g>
+  <g transform="translate(334, 310)">
+    <rect class="item" width="100" height="64" rx="6"/>
+    <text class="name" x="50" y="38" text-anchor="middle">Toms 1 &amp; 2</text>
+    <text class="ch" x="50" y="58" text-anchor="middle">Ch 4</text>
+  </g>
+  <g transform="translate(445, 310)">
+    <rect class="item" width="100" height="64" rx="6"/>
+    <text class="name" x="50" y="38" text-anchor="middle">Floor</text>
+    <text class="ch" x="50" y="58" text-anchor="middle">Ch 5</text>
+  </g>
+  <g transform="translate(556, 310)">
+    <rect class="item" width="100" height="64" rx="6"/>
+    <text class="name" x="50" y="34" text-anchor="middle">Bass</text>
+    <text class="small" x="50" y="48" text-anchor="middle">active DI</text>
+    <text class="ch" x="50" y="62" text-anchor="middle">Ch 6</text>
+  </g>
+  <g transform="translate(667, 310)">
+    <rect class="item" width="95" height="64" rx="6"/>
+    <text class="name" x="47" y="38" text-anchor="middle">Rhythm gtr</text>
+    <text class="ch" x="47" y="58" text-anchor="middle">Ch 7</text>
+  </g>
+  <g transform="translate(667, 382)">
+    <rect class="item" width="95" height="64" rx="6"/>
+    <text class="name" x="47" y="38" text-anchor="middle">Lead gtr</text>
+    <text class="ch" x="47" y="58" text-anchor="middle">Ch 8</text>
+  </g>
+
+  <text class="note" x="400" y="505" text-anchor="middle">Audience ’</text>
+</svg>
