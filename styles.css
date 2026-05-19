@@ -29,6 +29,15 @@
   --panel-text-muted: rgba(210, 228, 238, 0.88);
   --panel-heading: #ffffff;
   --title-color: var(--beam-yellow);
+  --title-outline-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 -1px 0 #000,
+    0 1px 0 #000,
+    -1px 0 0 #000,
+    1px 0 0 #000;
   --panel-accent: var(--reggae-gold);
   --panel-link: var(--reggae-gold);
   --radius: 12px;
@@ -63,6 +72,14 @@ main {
   position: relative;
   z-index: 1;
   color: var(--panel-text);
+}
+
+main h2,
+main h3,
+.eyebrow,
+.press-asset figcaption,
+.tech-details summary {
+  text-shadow: var(--title-outline-shadow);
 }
 
 main h2,
@@ -281,7 +298,6 @@ p {
   color: var(--title-color);
   opacity: 1;
   margin-bottom: 0.75rem;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .tagline {
