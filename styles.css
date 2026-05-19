@@ -9,6 +9,7 @@
   --sea-light: #1a7a6d;
   --reggae-green: #1b8f4a;
   --reggae-gold: #e8b923;
+  --logo-lime: #b8e050;
   --reggae-red: #b83232;
   --ink: #0f1a18;
   --ink-soft: #2a3d39;
@@ -714,54 +715,61 @@ p {
 
 .press-gallery {
   list-style: none;
-  margin: 1.25rem 0 0;
+  margin: 1.25rem auto 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+  max-width: 36rem;
+}
+
+.press-gallery li {
+  display: flex;
 }
 
 .press-asset {
   margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .press-asset a {
-  display: block;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--panel-border);
-  background: rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .press-asset a:hover,
 .press-asset a:focus-visible {
-  transform: scale(1.03);
-  box-shadow: 0 8px 24px rgba(232, 185, 35, 0.35);
+  transform: scale(1.02);
+  border-color: rgba(184, 224, 80, 0.45);
+  box-shadow: 0 8px 24px rgba(184, 224, 80, 0.25);
 }
 
 .press-asset img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.press-asset--logo img {
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: contain;
   padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .press-asset figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   font-family: var(--font-display);
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-  color: var(--reggae-gold);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--logo-lime);
+  line-height: 1.2;
 }
 
 /* Shows */
