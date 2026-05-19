@@ -496,26 +496,6 @@ p {
   text-align: right;
 }
 
-/* Highlights */
-.highlight-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.highlight-list li {
-  padding: 1rem 1.25rem;
-  background: var(--panel-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: var(--radius);
-  border: 1px solid var(--panel-border);
-  border-left: 4px solid var(--panel-accent);
-  box-shadow: 0 6px 20px rgba(8, 28, 42, 0.25);
-}
-
 /* Music */
 .music-grid {
   display: grid;
@@ -947,7 +927,6 @@ p {
   .contact-section,
   .card,
   .fact-grid,
-  .highlight-list li,
   .press-quote,
   .show-card,
   .tech-details {
