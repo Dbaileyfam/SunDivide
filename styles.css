@@ -21,9 +21,9 @@
   --text-muted: #4a5c58;
   --border: rgba(15, 26, 24, 0.12);
   /* Translucent blue panels — complements logo sun & green */
-  --panel: rgba(16, 48, 68, 0.42);
-  --panel-strong: rgba(12, 38, 56, 0.52);
-  --panel-alt: rgba(20, 58, 82, 0.36);
+  --panel: rgba(16, 48, 68, 0.22);
+  --panel-strong: rgba(12, 38, 56, 0.3);
+  --panel-alt: rgba(20, 58, 82, 0.16);
   --panel-border: rgba(160, 210, 230, 0.22);
   --panel-text: #eef6fa;
   --panel-text-muted: rgba(210, 228, 238, 0.88);
@@ -190,9 +190,9 @@ p {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(30, 18, 12, 0.2) 0%,
-    rgba(16, 48, 68, 0.12) 50%,
-    rgba(12, 38, 56, 0.22) 100%
+    rgba(30, 18, 12, 0.1) 0%,
+    rgba(16, 48, 68, 0.06) 50%,
+    rgba(12, 38, 56, 0.12) 100%
   );
   animation: warmth-pulse 12s ease-in-out infinite alternate;
 }
@@ -394,16 +394,16 @@ p {
 
 /* Sections */
 .section {
-  padding: 4rem 0;
+  padding: 2.75rem 0;
   background: var(--panel);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .section-alt {
   background: var(--panel-alt);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .section-intro {
@@ -433,16 +433,16 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0;
   background: var(--panel-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: var(--radius-lg);
-  box-shadow: 0 12px 40px rgba(8, 28, 42, 0.35);
+  box-shadow: 0 8px 24px rgba(8, 28, 42, 0.2);
   border: 1px solid var(--panel-border);
   overflow: hidden;
 }
 
 .fact-grid li {
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.15rem;
   border-right: 1px solid var(--panel-border);
   display: flex;
   flex-direction: column;
@@ -482,12 +482,12 @@ p {
 
 .card {
   background: var(--panel-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: 0 8px 28px rgba(8, 28, 42, 0.3);
+  padding: 1.15rem;
+  box-shadow: 0 6px 20px rgba(8, 28, 42, 0.18);
 }
 
 .lineup {
@@ -666,13 +666,13 @@ p {
 /* Press */
 .press-quote {
   margin: 0 0 2rem;
-  padding: 2rem 2rem 1.5rem;
+  padding: 1.5rem 1.5rem 1.25rem;
   background: var(--panel-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: var(--radius-lg);
   border: 1px solid var(--panel-border);
-  box-shadow: 0 12px 40px rgba(8, 28, 42, 0.35);
+  box-shadow: 0 6px 20px rgba(8, 28, 42, 0.18);
   position: relative;
 }
 
@@ -806,13 +806,13 @@ p {
   display: flex;
   gap: 1.25rem;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.15rem;
   background: var(--panel-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: var(--radius);
   border: 1px solid var(--panel-border);
-  box-shadow: 0 8px 28px rgba(8, 28, 42, 0.3);
+  box-shadow: 0 6px 20px rgba(8, 28, 42, 0.18);
 }
 
 .show-card time {
@@ -945,8 +945,8 @@ p {
 
 .tech-details {
   background: var(--panel-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
   padding: 0 1rem 1rem;
@@ -1037,8 +1037,19 @@ p {
 /* Contact */
 .contact-section {
   background: var(--panel);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.contact-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-section .lead {
+  max-width: 32rem;
 }
 
 .contact-grid {
@@ -1055,6 +1066,13 @@ p {
 
 .contact-card {
   font-style: normal;
+  max-width: 20rem;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card p {
+  margin-bottom: 0.35rem;
 }
 
 .contact-name {
