@@ -10,6 +10,7 @@
   --reggae-green: #1b8f4a;
   --reggae-gold: #e8b923;
   --logo-lime: #84d23e;
+  --beam-yellow: #f5ce45;
   --reggae-red: #b83232;
   --ink: #0f1a18;
   --ink-soft: #2a3d39;
@@ -26,7 +27,7 @@
   --panel-text: #eef6fa;
   --panel-text-muted: rgba(210, 228, 238, 0.88);
   --panel-heading: #ffffff;
-  --title-color: var(--logo-lime);
+  --title-color: var(--beam-yellow);
   --panel-accent: var(--reggae-gold);
   --panel-link: var(--reggae-gold);
   --radius: 12px;
