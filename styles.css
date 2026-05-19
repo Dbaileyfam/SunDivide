@@ -734,6 +734,13 @@ p {
   max-width: 36rem;
 }
 
+@media (min-width: 640px) {
+  .press-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 54rem;
+  }
+}
+
 .press-gallery li {
   display: flex;
 }
