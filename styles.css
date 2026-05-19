@@ -22,7 +22,7 @@
   --border: rgba(15, 26, 24, 0.12);
   /* Translucent blue panels — complements logo sun & green */
   --panel: rgba(16, 48, 68, 0.22);
-  --panel-strong: rgba(12, 38, 56, 0.3);
+  --panel-strong: rgba(12, 38, 56, 0.28);
   --panel-alt: rgba(20, 58, 82, 0.16);
   --panel-border: rgba(160, 210, 230, 0.22);
   --panel-text: #eef6fa;
@@ -392,18 +392,14 @@ p {
   box-shadow: 0 6px 26px rgba(217, 79, 48, 0.55);
 }
 
-/* Sections */
+/* Sections — transparent bands; glass boxes live on .card and similar */
 .section {
-  padding: 2.75rem 0;
-  background: var(--panel);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  padding: 2rem 0;
+  background: transparent;
 }
 
 .section-alt {
-  background: var(--panel-alt);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: transparent;
 }
 
 .section-intro {
@@ -442,7 +438,7 @@ p {
 }
 
 .fact-grid li {
-  padding: 1rem 1.15rem;
+  padding: 0.85rem 1rem;
   border-right: 1px solid var(--panel-border);
   display: flex;
   flex-direction: column;
@@ -468,6 +464,16 @@ p {
 }
 
 /* Bio split */
+.bio-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bio-card {
+  min-height: 5rem;
+}
+
 .lineup-card h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
@@ -487,12 +493,12 @@ p {
 
 .card {
   background: var(--panel-strong);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
-  padding: 1.15rem;
-  box-shadow: 0 6px 20px rgba(8, 28, 42, 0.18);
+  padding: 0.9rem 1rem;
+  box-shadow: 0 4px 16px rgba(8, 28, 42, 0.14);
 }
 
 .lineup {
@@ -1041,9 +1047,7 @@ p {
 
 /* Contact */
 .contact-section {
-  background: var(--panel);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: transparent;
 }
 
 .contact-section .container {
