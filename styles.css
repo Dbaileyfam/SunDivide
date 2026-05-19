@@ -512,17 +512,6 @@ p {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 900px) {
-  .music-grid {
-    grid-template-columns: 1fr  minmax(280px, 340px);
-    align-items: start;
-  }
-
-  .embed-wrap {
-    grid-column: 1 / -1;
-  }
-}
-
 .embed-wrap {
   width: 100%;
   min-height: 452px;
