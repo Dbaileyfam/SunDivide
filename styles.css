@@ -1066,6 +1066,12 @@ p {
 .contact-card a {
   font-size: 1.05rem;
   font-weight: 500;
+  color: var(--beam-orange);
+}
+
+.contact-card a:hover,
+.contact-card a:focus-visible {
+  color: #f5b85a;
 }
 
 /* Footer */
