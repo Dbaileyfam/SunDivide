@@ -259,6 +259,16 @@
               <p class="show-venue">Cottonwood Heights, UT</p>
             </div>
           </li>
+          <li class="show-card">
+            <time datetime="2026-08-30">
+              <span class="show-date">Aug 30</span>
+              <span class="show-year">2026</span>
+            </time>
+            <div>
+              <h3>Park Silly Market</h3>
+              <p class="show-venue">Park City, UT</p>
+            </div>
+          </li>
         </ul>
 
         <div class="show-flyers">
@@ -342,36 +352,48 @@
             <span class="tech-summary-label">Stage plot</span>
             <span class="tech-summary-meta">Five-piece layout. We require outputs for in-ear monitors (IEM).</span>
           </summary>
-          <div class="stage-layout">
-          <div class="stage-zone stage-up">
-            <p class="zone-label">Upstage</p>
-            <div class="stage-grid stage-grid-up">
-              <div class="stage-item" data-ch="9"><span>Keyboards</span><small>2 ch DI</small></div>
-              <div class="stage-item" data-ch="10"><span>Keys vocal</span></div>
-              <div class="stage-item" data-ch="11"><span>Lead vocal</span></div>
-              <div class="stage-item" data-ch="12"><span>Lead guitar</span><small>vocal</small></div>
-            </div>
-            <p class="band-marker">Sun Divide</p>
+          <div class="stage-layout stage-layout--plot">
+            <img
+              class="stage-plot-image"
+              src="assets/sun-divide-stage-plot.png"
+              alt="Sun Divide stage plot — drums, keys, guitars, bass, and monitor positions"
+              width="2000"
+              height="1125"
+              loading="lazy"
+            />
           </div>
-          <div class="stage-zone stage-down">
-            <p class="zone-label">Downstage</p>
-            <div class="stage-grid stage-grid-down">
-              <div class="stage-item" data-ch="1"><span>Kick</span></div>
-              <div class="stage-item" data-ch="2"><span>Snare</span></div>
-              <div class="stage-item" data-ch="3"><span>Hi-hat</span></div>
-              <div class="stage-item" data-ch="4"><span>Toms 1 &amp; 2</span></div>
-              <div class="stage-item" data-ch="5"><span>Floor tom</span></div>
-              <div class="stage-item" data-ch="6"><span>Bass</span><small>active DI</small></div>
-              <div class="stage-item" data-ch="7"><span>Rhythm guitar</span></div>
-              <div class="stage-item" data-ch="8"><span>Lead guitar</span></div>
-            </div>
-          </div>
+          <div class="stage-plot-details card">
+            <h4 class="stage-plot-details-heading">Stage notes</h4>
+            <ul class="stage-plot-list">
+              <li><strong>Lead vox:</strong> Own mic · TC Helicon vocal FX pedal · IEM (radio)</li>
+              <li><strong>B-vox:</strong> Own mic and stand</li>
+              <li><strong>Keys:</strong> 2 keyboards into Radial Key Largo (L+R XLR to FOH) · IEM belt clip (not radio) · Keys monitor — not mic’d, not sent to FOH</li>
+              <li><strong>Electric guitar 1:</strong> Combo/cab — DI from Tonemaster board or mic’d to FOH · IEM (radio)</li>
+              <li><strong>Electric guitar 2:</strong> Guitar combo/cab — mic’d to FOH · Monitor for guitar</li>
+              <li><strong>Electric bass:</strong> Bass rig/combo cab — DI to FOH</li>
+              <li><strong>Drums:</strong> 5-piece kit (could be 6) · Monitor for drummer</li>
+            </ul>
+            <h4 class="stage-plot-details-heading">FOH input summary (from stage right)</h4>
+            <ul class="stage-plot-list">
+              <li>Keys — L + R from own DI · vox</li>
+              <li>Guitar 1 — mono DI or mic cab · vox</li>
+              <li>Drums — 5-piece shown (could be 6)</li>
+              <li>Bass — DI from head</li>
+              <li>Guitar 2 — mic cab · vox</li>
+            </ul>
+            <p class="stage-plot-contact">
+              <strong>Contact:</strong>
+              Thom Welsh (lead vox/guitar 1) —
+              <a href="mailto:welsh528@gmail.com">welsh528@gmail.com</a><br />
+              Simon Carter (keys) —
+              <a href="mailto:freerskier@gmail.com">freerskier@gmail.com</a>
+            </p>
           </div>
           <p class="tech-download">
             <a
               class="btn btn-download"
-              href="assets/sun-divide-stage-plot.svg"
-              download="Sun-Divide-Stage-Plot.svg"
+              href="assets/sun-divide-stage-plot.png"
+              download="Sun-Divide-Stage-Plot.png"
             >Download stage plot</a>
           </p>
         </details>
@@ -381,19 +403,16 @@
             <span class="tech-summary-label">Full input list</span>
             <span class="tech-summary-meta">Channels 1–16</span>
           </summary>
-          <table class="input-table">
+          <table class="input-table input-table--summary">
             <thead>
-              <tr><th>Ch</th><th>Source</th><th>Ch</th><th>Source</th></tr>
+              <tr><th>Position (stage right)</th><th>Input</th></tr>
             </thead>
             <tbody>
-              <tr><td>1</td><td>Kick</td><td>9</td><td>Keyboards (2 ch DI)</td></tr>
-              <tr><td>2</td><td>Snare</td><td>10</td><td>Keys vocal</td></tr>
-              <tr><td>3</td><td>Hi-hat</td><td>11</td><td>Lead vocal</td></tr>
-              <tr><td>4</td><td>Toms 1, 2</td><td>12</td><td>Lead guitar vocal</td></tr>
-              <tr><td>5</td><td>Floor</td><td>13–16</td><td>—</td></tr>
-              <tr><td>6</td><td>Bass guitar (active DI)</td><td colspan="2"></td></tr>
-              <tr><td>7</td><td>Rhythm guitar</td><td colspan="2"></td></tr>
-              <tr><td>8</td><td>Lead guitar</td><td colspan="2"></td></tr>
+              <tr><td>Keys</td><td>L + R from own DI · vox</td></tr>
+              <tr><td>Guitar 1</td><td>Mono DI or mic cab · vox</td></tr>
+              <tr><td>Drums</td><td>5-piece kit (could be 6)</td></tr>
+              <tr><td>Bass</td><td>DI from head</td></tr>
+              <tr><td>Guitar 2</td><td>Mic cab · vox</td></tr>
             </tbody>
           </table>
           <p class="tech-note"><strong>Note:</strong> Outputs required for in-ear monitors.</p>
