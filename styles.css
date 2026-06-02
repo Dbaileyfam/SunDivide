@@ -564,6 +564,74 @@ p {
 }
 
 /* Music */
+.release-spotlight {
+  margin-bottom: 1.5rem;
+}
+
+.release-spotlight__inner {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.release-spotlight__art {
+  display: block;
+  max-width: 280px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(8, 28, 42, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.release-spotlight__art:hover,
+.release-spotlight__art:focus-visible {
+  transform: scale(1.02);
+  box-shadow: 0 12px 36px rgba(8, 28, 42, 0.45);
+}
+
+.release-spotlight__art:focus-visible {
+  outline: 2px solid var(--panel-accent);
+  outline-offset: 4px;
+}
+
+.release-spotlight__art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.release-eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--panel-accent);
+}
+
+.release-spotlight h3 {
+  margin: 0 0 0.5rem;
+}
+
+.release-meta {
+  margin: 0 0 1.25rem;
+  color: var(--panel-text-muted);
+}
+
+@media (min-width: 640px) {
+  .release-spotlight__inner {
+    grid-template-columns: minmax(200px, 260px) 1fr;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .release-spotlight__body {
+    justify-self: start;
+  }
+}
+
 .music-grid {
   display: grid;
   gap: 1.5rem;
