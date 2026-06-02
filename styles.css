@@ -565,12 +565,16 @@ p {
 
 /* Music */
 .release-spotlight {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
   margin-bottom: 1.5rem;
+  padding: 1rem 1.15rem;
 }
 
 .release-spotlight__inner {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
   justify-items: center;
   text-align: center;
@@ -622,13 +626,14 @@ p {
 
 @media (min-width: 640px) {
   .release-spotlight__inner {
-    grid-template-columns: minmax(200px, 260px) 1fr;
+    grid-template-columns: auto auto;
     justify-items: start;
     text-align: left;
   }
 
   .release-spotlight__body {
-    justify-self: start;
+    width: max-content;
+    max-width: 16rem;
   }
 }
 
